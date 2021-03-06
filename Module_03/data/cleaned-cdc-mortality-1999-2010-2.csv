@@ -1,4 +1,4 @@
-ICD.Chapter,State,Year,Deaths,Population,Crude.Rate
+ICDChapter,State,Year,Deaths,Population,CrudeRate
 Certain infectious and parasitic diseases,AL,1999,1092,4430141,24.6
 Certain infectious and parasitic diseases,AL,2000,1188,4447100,26.7
 Certain infectious and parasitic diseases,AL,2001,1211,4467634,27.1
