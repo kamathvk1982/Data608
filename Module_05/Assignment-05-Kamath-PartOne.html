@@ -1,0 +1,109 @@
+<html>
+
+<head><title>Assignment 05 - Introduction to Javascript </title></head>
+
+<body>
+
+
+<script type="text/javascript">
+// Variables :
+
+// Basic functions :
+
+function reverse_it(v_text){
+    var r_text = v_text.split('').reverse().join('');
+
+    str = 'Reversal of "' + v_text + '" is "' + r_text + '"';
+    return str;
+};
+
+function calc_reverse(){
+    var t = document.getElementById("target_reverse");
+    t.innerHTML = reverse_it(document.getElementById('v_text').value);
+}
+
+
+function multiply(v_num){
+  // get the reference for the body
+  var body = document.getElementsByTagName("body")[0];
+
+  // creates a <table> element and a <tbody> element
+  var tbl = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+
+  var i_counter = '1';
+
+  // creating all cells for 5x4 matrix
+  for (var i = 0; i < 5; i++) {
+    // creates a table row
+    var row = document.createElement("tr");
+
+    for (var j = 0; j < 4; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(v_num * i_counter);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+      i_counter++;
+    }
+
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
+  }
+
+  // put the <tbody> in the <table>
+  tbl.appendChild(tblBody);
+  // appends <table> into <body>
+  body.appendChild(tbl);
+  // sets the border attribute of tbl to 2;
+  tbl.setAttribute("border", "2");
+
+  str = '20 Multiples of ' + v_num + ' is ' ;
+  return str;
+};
+
+function calc_multiply(){
+    var t = document.getElementById("target_multiply");
+    t.innerHTML = multiply(document.getElementById('v_num').value);
+}
+
+</script>
+
+
+<h1>Assignment 05 - Introduction to Javascript - Part One</h1>
+
+
+<p>
+<form>
+	<input type="button" value="Reload Page" onClick="window.location.reload();">
+</form>
+</p>
+
+<h3>Question 1</h3>
+<h4>Create a function to reverse any word that you type in. This can be typed into either an input box or an alert box, and then print the result in a box or on the webpage.</h4>
+
+<p>
+<form>
+    <input id="v_text" type="text" size="45">
+    <input type="button" value="Reverse" onClick="calc_reverse();">
+</form>
+</p>
+
+<div id="target_reverse"></div>
+
+<h3>Question 2</h3>
+<h4>Create a function that takes an input number, and prints a table with the first 20 multiples of the number, in order 5x4.</h4>
+
+<p>
+<form>
+    <input id="v_num" type="number" size="4">
+    <input type="button" value="Display Multiplication Table" onClick="calc_multiply();">
+</form>
+</p>
+
+<div id="target_multiply"></div>
+
+</body>
+</html>
