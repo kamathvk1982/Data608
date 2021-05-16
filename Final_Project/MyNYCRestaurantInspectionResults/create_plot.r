@@ -92,7 +92,7 @@ createGrpHistPlot <- function(  businessInp ){
   p <-   data.nyc %>%
     filter(CAMIS == (if(grepl(name.All,businessInp))  CAMIS else  businessInp) ) %>%
     group_by(VIOLATION_CODE, VIOLATION_DESCRIPTION ) %>%
-    summarise(tot = n())  %>%
+    summarise(tot = n(),  .groups ='keep')  %>%
     ggplot(aes(VIOLATION_CODE, tot,  fill = VIOLATION_CODE, text = paste(VIOLATION_CODE, " : ", VIOLATION_DESCRIPTION))) +
     geom_col(show.legend = FALSE) +
     labs(y = "Contribution to VIOLATIONS",
