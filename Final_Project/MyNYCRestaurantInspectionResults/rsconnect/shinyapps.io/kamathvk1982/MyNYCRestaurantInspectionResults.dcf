@@ -1,0 +1,12 @@
+name: MyNYCRestaurantInspectionResults
+title: MyNYCRestaurantInspectionResults
+username:
+account: kamathvk1982
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4102204
+bundleId: 4603042
+url: https://kamathvk1982.shinyapps.io/MyNYCRestaurantInspectionResults/
+when: 1621143042.09585
+asMultiple: FALSE
+asStatic: FALSE
